@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    .color {
+      color: #ffff;
+    }
+
+    .range {
+      text-decoration: none;
+      color: black;
+    }
+
+    .price {
+
+      color: rgb(199, 36, 36);
+      font-size: 20px;
+
+    }
+
+    .deal {
+      background-color: rgb(156, 16, 16);
+      margin-left: 70px;
+      margin-right: 70px;
+      padding-left: 50px;
+      padding: 6px;
+      color: #ffff;
+    }
+
+    .backcolor {
+      width: 150px;
+      background-color: rgb(150, 146, 146);
+    }
+
+    .center {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .pad {
+      padding: 10px;
+    }
+
+    .title {
+      display: flex;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: large;
+      justify-content: center;
+    }
+
+    .des {
+
+      padding: 0px;
+      align-self: center;
+    }
+
+    .blue {
+      color: rgb(207, 132, 45);
+    }
+  </style>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-black">
+    <div class="container-fluid">
+      <p><img src="amazo.png" width="130px"></p>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <p class="color">
+                <ui class="fs-6">Hello</ui><br><b>Select your Address</b>
+              </p>
+            </a>
+
+          </li>
+          <div class="dropdown col m-2 pb-3">
+            <button class="btn btn-light  dropdown-toggle m-2" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              All
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li class="dropdown-item">Action</li>
+              <li class="dropdown-item">Another action</li>
+              <li class="dropdown-item">Something else here</li>
+            </ul>
+        </ul>
+
+        <div class="row" style="width: 350px;">
+
+          <div class="col pb-3"><input type="text" class="form-control" id="inputType" /></div>
+
+
+        </div>
+
+        <div class="col pb-3"> <button class="btn" onclick="showResult()"><img src="serc.png"></button></div>
+        <div class="col color">
+          <label>Returns</label><br><b>&orders</b>
+        </div>
+        <div class="col"><img src="cart.jpg" width="110px"></div>
+
+
+
+      </div>
+
+    </div>
+    </div>
+  </nav>
+  <div>
+    <div class="pl-5"><img src="viradcohli.png" height="300px"></div>
+  </div>
+  <div class="container-fluid" style="display:flex;">
+
+    <div style="width: 200px;display: flex;flex-direction:column;">
+      <b>Brand color</b>
+      <img src="brandcolor.png" width="200px">
+      <b>Brand</b>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="brandType" onclick="brand('TIMEX')" value="">
+        <label class="form-check-label" for="flexCheckDefault">
+          TIMEX
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="brandType" onclick="brand('Sonata')" value="">
+        <label class="form-check-label" for="flexCheckDefault">
+          Sonata
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="brandType" onclick="brand('Fastrack')" value="">
+        <label class="form-check-label" for="flexCheckDefault">
+          Fastrack
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="brandType" onclick="brand('SF')" value=" ">
+        <label class="form-check-label" for="flexCheckDefault">
+          SF
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="brandType" onclick=" brand('STUFF')" value="">
+        <label class="form-check-label" for="flexCheckDefault">
+          SWADESI STUFF
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="brandType" onclick="brand(' Ferrari')" value="">
+        <label class="form-check-label" for="flexCheckDefault">
+          Scuderia Ferrari
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="brandType" onclick="brand('Skagen')" value="">
+        <label class="form-check-label" for="flexCheckDefault">
+          Skagen
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="brandType" onclick="brand('Armani')" value="">
+        <label class="form-check-label" for="flexCheckDefault">
+          Emporio Armani
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="brandType" onclick="brand('casio')" value="">
+        <label class="form-check-label" for="flexCheckDefault">
+          casio
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="brandType" onclick="brand('Fossil')" value="">
+        <label class="form-check-label" for="flexCheckDefault">
+          Fossil
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="brandType" onclick="brand('GALLANT')" value=""
+          id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          G GALLANT
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" onclick="brand('GUESS')" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          GUESS
+        </label>
+      </div>
+      <b>Price</b>
+      <div>
+        <button class="btn btn-link text-decoration-none " style="color:black" onclick="twothousand(1,2000)"> Under
+          ₹2,000
+        </button>
+        <button class="btn btn-link text-decoration-none" style="color:black" onclick=" twothousand(2000,5000)">₹2,000 -
+          ₹5,000</button>
+        <button class="btn btn-link text-decoration-none" style="color:black" onclick="twothousand(5000,10000)">₹5,000 -
+          ₹10,000</button>
+        <button class="btn btn-link text-decoration-none" style="color:black" onclick="twothousand(10000,15000)">₹10,000
+          -
+          ₹15,000</button>
+        <button class="btn btn-link text-decoration-none" style="color:black" onclick="twothousand(15000,20000)">₹15,000
+          -
+          ₹20,000</button>
+      </div>
+      <div><input type="text" style="width:50px " placeholder="₹Min" id="priceFrom" />
+        <input type="text" style="width:50px" placeholder="₹Max" id="priceTo" />
+        <button class="btn btn-outline-dark" onclick="showProductPrice()">Go</button>
+      </div><br>
+      <b>Deal</b>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" onclick="deal()" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Today's Deal
+        </label>
+      </div>
+      <div>
+        <b>Discount</b>
+
+        <button class="btn btn-link  text-decoration-none" style="color:black" onclick="offerperc(10)">10% Off or
+          more</button>
+        <button class="btn btn-link text-decoration-none" style="color:black" onclick="offerperc(25)">25% Off or
+          more</button>
+        <button class="btn btn-link text-decoration-none" style="color:black" onclick="offerperc(35)">35% Off or
+          more</button>
+        <button class="btn btn-link text-decoration-none" style="color:black" onclick="offerperc(50)">50% Off or
+          more</button>
+        <button class="btn btn-link text-decoration-none" style="color:black" onclick="offerperc(60)">60% Off or
+          more</button>
+        <button class="btn btn-link text-decoration-none" style="color:black" onclick="offerperc(70)">70% Off or
+          more</button>
+      </div>
+
+      <b>Display</b>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" onclick="display('Analog')" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Analogue
+        </label>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" onclick="display('Digital')" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Digital
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" onclick="display('Analog-Digital')" value=""
+          id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Analogue-Digital
+        </label>
+      </div>
+
+      <b>Watch Case Diameter </b>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" onclick="diameter(1,19)" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          up to 19mm
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" onclick="diameter(20,29)" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          20 to 29mm
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" onclick="diameter(30,39)" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          30 to 39mm
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" onclick="diameter(40,49)" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          40 to 49mm
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" onclick="diameter(50,60)" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          50mm & more
+        </label>
+      </div>
+
+
+
+
+      <div>
+        <h6>Dial color</h6>
+<img src="dialcolor.png">
+      </div>
+
+
+
+
+    </div>
+    <div class="container-fluid d-flex flex-wrap" id="productContainer">
+
+    </div>
+  </div>
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script>
+    function createProductCard(p) {
+      return '<div class="container-fluid card center p-1 m-1" style="width:18rem;">\
+                 <div class="mx-auto"> <img  src=" ' + p.imageUrl + ' " width="200px"></div> \
+                   <div class="card-body"style="background-color:#fff" >\
+                      <h5 class="card-title title">' + p.title + '</h5><h6  class="text-center">\
+                    ' + p.description + ' </h6><h6 class="text-center bg-danger p-1" style="margin-left:50px;margin-right:50px;color:#fff">' + p.deal + '</h6> \
+                  <P class="center"> <b class="price">' + p.price + '</b>' + '\
+                <span><strike> '+ p.strike + '</strike> </span>' +
+        ' <b>' + p.per + ' </p></b> <p class="card-text text-center">' + p.details + '<b> ' + p.date + ' </b><h6 class="blue text-center">' + p.Delivery + '</h6></p>'
+        + ' </div></div>'
+    }
+    var products = [{
+      title: "Sonata",
+      description: "Analog Watches for Men",
+      description2: " Sonata Analog Watches for Men",
+      imageUrl: "https://m.media-amazon.com/images/I/71vCFkdrlNL._AC_UL320_.jpg",
+      price: "₹1005", strike: " ₹1,125", per: "(10% off)",
+      pric: 1005, offer: 10,
+      details: "Get it by ", date: "Tuesday, July 5 ", Delivery: "FREE Delivery by Amazon", deal: "Deal of the Day",
+      other: "c-black", brand: 10,
+    },
+    {
+      title: "Fastrack",
+      description: "Casual Analog White Dial Men's Watch",
+      description2: "Fastrack Casual Analog White Dial Men's Watch",
+      imageUrl: "https://m.media-amazon.com/images/I/71I7ZYAh5CL._UY500_.jpg",
+      price: "₹1,049", strike: "  ₹1,195", per: "(12% off)", pric: 1046, offer: 12,
+      details: "Get it by ", date: "Tuesday, July 5 ", Delivery: "FREE Delivery by Amazon", deal: "Deal of the day", stock: "Deal of the Day",
+      other: "c-black", brand: 20,
+    },
+    {
+      title: "SF",
+      description: "Digital Grey Square Dial Men's Sport Watch-",
+      description2: " SF Digital Grey Square Dial Men's Sport Watch-",
+      imageUrl: "https://m.media-amazon.com/images/I/61FR3Hf26rL._AC_UL320_.jpg",
+      price: "₹955", strike: " ₹1,125", per: "(15% off)", pric: 955, offer: 15,
+      details: "Get it by ", date: "Tuesday, July 5 ", Delivery: "FREE Delivery by Amazon", stock: "out of stock", deal: 'Out  of  Stock'
+      , other: "c-black", brand: 15
+    },
+    {
+      title: "SWADESI STUFF",
+      description: "Digital Multi Function Waterproof Sport Watch for Men and Boys",
+      description2: " SWADESI STUFF Digital Multi Function Waterproof Sport Watch for Men and Boys",
+      imageUrl: "https://m.media-amazon.com/images/I/81cZeKGKcLL._AC_UL320_.jpg",
+      price: "₹349", strike: "  ₹1,500 ", per: "(77% off)", pric: 349, offer: 77,
+      details: "Get it by ", date: "Tuesday, July 5 ", Delivery: "FREE Delivery by Amazon", stock: "out of stock", deal: "Deal of the day"
+      , other: "c-blue", brand: 30
+    },
+    {
+      title: "Scuderia Ferrari",
+      description: "Aspire Analog Black Dial Men's Watch-830786",
+      description2: "Scuderia Ferrari Aspire Analog Black Dial Men's Watch-830786",
+      imageUrl: "https://m.media-amazon.com/images/I/61QGYzkFJYL._AC_UL320_.jpg",
+      price: "₹800", strike: " ₹1,125", per: "(25% off)", pric: 800, offer: 25,
+      details: "Get it by ", date: "Tuesday, July 5 ", Delivery: "FREE Delivery by Amazon", stock: "out of stock", deal: "Deal of the day"
+      , other: "c-red", brand: 40
+    },
+    {
+      title: "Skagen",
+      description: "Jorn Hybrid HR Analog Black Dial Men's Watch-SKT3000",
+      description2: "  Skagen Jorn Hybrid HR Analog Black Dial Men's Watch-SKT3000",
+      imageUrl: "https://m.media-amazon.com/images/I/81Ch9pbX3iL._AC_UL320_.jpg",
+      price: "₹10146", strike: " ₹1,999 ", per: "(32% off)", pric: 10146, offer: 32, deal: "Out  of Stock",
+      details: "Get it by ", date: "Friday, July 10 ", Delivery: "FREE Delivery by Amazon", stock: " ", brand: 60,
+
+    },
+    {
+      title: "Emporio Armani",
+      description: "Smartwatch 3 (44mm dial) with AMOLED Touchscreen, Google",
+      description2: "Emporio Armani Smartwatch 3 (44mm dial) with AMOLED Touchscreen, Google",
+      imageUrl: "https://m.media-amazon.com/images/I/61zH9oFRPsL._AC_UL320_.jpg",
+      price: "₹9000", strike: 18000, per: "( 50% off)", pric: 9000, offer: 50, other: "green",
+      details: "Get it by ", date: "Tuesday, July 5 ", Delivery: "FREE Delivery by Amazon", deal: "Limitted time Deal",
+      brand: 50,
+    },
+
+    {
+      title: "TIMEX",
+      description: "Automatic Analog Silver Dial Men's Watch-TWEG17500",
+      description2: "TIMEX Automatic Analog Silver Dial Men's Watch-TWEG17500",
+      imageUrl: "https://m.media-amazon.com/images/I/61Av1busxuL._AC_UL320_.jpg",
+      price: "₹11995", strike: 8000, per: "(20% off)", pric: 11955, offer: 20,
+      details: "Get it by", date: " tomorrow, June 28 ", Delivery: "FREE Delivery by Amazon", deal: "Deal of the day", brand: 33
+    },
+    {
+      title: "Skagen",
+      description: "Jorn Hybrid HR Analog Black Dial Men's Watch-SKT3001",
+      imageUrl: "https://m.media-amazon.com/images/I/71vR9TejwcL._AC_UL320_.jpg",
+      price: "₹10,146", strike: "₹10,146", per: "(30% off)", pric: 10146, offer: 30,
+      details: "Get it by", date: " tomorrow, June 28 ", Delivery: "FREE Delivery by Amazon", deal: "Deal of the day"
+    },
+
+    {
+      title: "Casio",
+      description: "Gen 5 Touchscreen Men's Smartwatch with Speaker, Heart",
+      description2: " casio Gen 5 Touchscreen Men's Smartwatch with Speaker, Heart",
+      imageUrl: "https://m.media-amazon.com/images/I/71qNX0wixBL._AC_UL320_.jpg",
+      price: "₹9000", strike: "₹18000", per: "(50% off)", pric: 955, offer: 15,
+      details: "Get it by ", date: "Tuesday, July 5 ", Delivery: "FREE Delivery by Amazon", deal: "Deal of the day"
+
+    },
+
+    {
+      title: "TIMEX",
+      description: "Gen 5 Touchscreen Men's Smartwatch with Speaker, Heart",
+      description2: " timex Gen 5 Touchscreen Men's Smartwatch with Speaker, Heart",
+      imageUrl: "https://m.media-amazon.com/images/I/71tc0IQKJGL._AC_UL320_.jpg",
+      price: "₹12,495", strike: "₹13,995 ", per: "((11% off))", pric: 12495, offer: 11,
+      details: "Get it by", date: " tomorrow, June 28 ", Delivery: "FREE Delivery by Amazon", deal: "Deal of the day"
+
+    },
+    {
+
+      title: "WENGER",
+      description: "Gen 5 Touchscreen Men's Smartwatch with Speaker, Heart",
+      description: " wenger Gen 5 Touchscreen Men's Smartwatch with Speaker, Heart",
+      imageUrl: "https://m.media-amazon.com/images/I/71qNX0wixBL._AC_UL320_.jpg",
+      price: "₹18,166", strike: "₹23,166", per: "(22% off)", pric: 18166, offer: 22, deal: "Deal of the day"
+
+    },
+    {
+      title: "Casio",
+      description: "Gen 5 Touchscreen Men's Smartwatch with Speaker, Heart",
+      description2: " casio Gen 5 Touchscreen Men's Smartwatch with Speaker, Heart",
+      imageUrl: "https://m.media-amazon.com/images/I/817+DdlKb8L._AC_UL320_.jpg", deal: " Limitted time Deal",
+      price: "₹299", strike: " ₹2,499", per: " (88% off)", pric: 299, offer: 88,
+
+    },
+    {
+      title: "WENGER",
+      description: "Gen 5 Touchscreen Men's Smartwatch with Speaker, Heart",
+      description2: " wenger Gen 5 Touchscreen Men's Smartwatch with Speaker, Heart",
+      imageUrl: "https://m.media-amazon.com/images/I/41CPJsov6HL._AC_UL320_.jpg",
+      price: "₹1,299", strike: " ₹1,595 ", per: "(19% off)", pric: 1299, offer: 19,
+      details: "Get it by ", date: "Tuesday, July 5 ", Delivery: "FREE Delivery by Amazon", deal: "Deal of the day"
+
+    },
+    {
+      title: "Casio",
+      description: "Gen 5 Touchscreen Men's Smartwatch with Speaker, Heart",
+      description2: " casio Gen 5 Touchscreen Men's Smartwatch with Speaker, Heart",
+      imageUrl: "https://d2j6dbq0eux0bg.cloudfront.net/images/1107006/2687400491.jpg",
+      price: "₹699", strike: "₹3,499", per: "(80% off)", pric: 699, offer: 80,
+      details: "Get it by", date: " tomorrow, June 28 ", Delivery: "FREE Delivery by Amazon", deal: "Deal of the day"
+
+
+    },
+    {
+      title: "WENGER",
+      description: "Men's Black Dial Stainless Steel Band Watch - MTPV001D-1B",
+      description2: " wenger Men's Black Dial Stainless Steel Band Watch - MTPV001D-1B",
+      imageUrl: "https://m.media-amazon.com/images/I/81TpueADAjL._AC_UL320_.jpg",
+      price: "₹14,995 ", strike: "₹22,995", per: "(35% off)", pric: 14995, offer: 35,
+      details: "Get it by ", date: "Tuesday, July 5 ", Delivery: "FREE Delivery by Amazon", deal: "Deal of the day"
+    },
+    {
+      title: "Casio",
+      description: "Gen 5 Touchscreen Men's Smartwatch with Speaker, Heart",
+      description2: " casio Gen 5 Touchscreen Men's Smartwatch with Speaker, Heart",
+      imageUrl: "https://m.media-amazon.com/images/I/61NZ9CWJcEL._AC_UL320_.jpg",
+      price: "₹3,730 ", strike: "₹8,295", per: "(55% off)", pric: 3730, offer: 55,
+      details: "Get it by", date: " tomorrow, June 28 ", Delivery: "FREE Delivery by Amazon", deal: "Deal of the day"
+
+
+    },
+    {
+      title: "Fossil",
+      description: "Analog Black Dial Men's Watch - FS5437",
+      description2: " fossil Analog Black Dial Men's Watch - FS5437",
+      imageUrl: "https://m.media-amazon.com/images/I/61FCTOS0xAL._AC_UL320_.jpg",
+      price: " ₹18,166 ", strike: "₹23,166", per: "(22% off)", pric: 18166, offer: 22,
+      details: "Get it by ", date: "Tuesday, July 5 ", Delivery: "FREE Delivery by Amazon", deal: "Deal of the day"
+
+    },
+
+    {
+      title: "WENGER",
+      description: "Swiss Made Urban Classic Analog Men's Watch - 01.1731.$2",
+      description: " wenger Swiss Made Urban Classic Analog Men's Watch - 01.1731.$2",
+      imageUrl: "https://m.media-amazon.com/images/I/71BTqjIYXoL._AC_UL320_.jpg",
+      price: " ₹5,216 ", strike: " ₹8,436", per: " (38% off)", pric: 5216, offer: 38,
+      details: "Get it by", date: " tomorrow, June 28 ", Delivery: "FREE Delivery by Amazon", deal: "Deal of the day"
+
+    },
+    {
+      title: "G GALLANT",
+      description: "Men's Watch, Mens Dress Watch Quartz Watch Moon Phrase Day",
+      description2: " gallent Men's Watch, Mens Dress Watch Quartz Watch Moon Phrase Day",
+      imageUrl: "https://m.media-amazon.com/images/I/61FR3Hf26rL._AC_UL320_.jpg",
+      price: "₹13,995", strike: '', per: '', pric: 13995,
+      details: "Get it by tomorrow, June 28 FREE Delivery by Amazon", deal: "Deal of the day"
+    },
+    {
+      title: "GUESS",
+      description: "Men's Automatic Chronograph Watch (Blue, GW0334G3)",
+      description2: " guess Men's Automatic Chronograph Watch (Blue, GW0334G3)",
+      imageUrl: "https://m.media-amazon.com/images/I/81gvu44nAjL._AC_UL320_.jpg",
+      price: " ₹15500", strike: '', per: "", pric: 15500,
+      details: "Get it by", date: " Friday, July 8 ", Delivery: "FREE Delivery by Amazon", deal: "Deal of the day"
+
+    },
+    {
+      title: "GUESS",
+      description: "Mens 48 mm Striker White Dial Nylon Analog Watch - GW0428G2",
+      description2: " guess Mens 48 mm Striker White Dial Nylon Analog Watch - GW0428G2",
+      imageUrl: "https://m.media-amazon.com/images/I/41Sak-MBYsL._AC_UL320_.jpg",
+      price: "₹3995", strike: '', per: " ", pric: 3995, deal: "Deal of the day",
+      details: "Get it by", date: " tomorrow, June 28 ", Delivery: "FREE Delivery by Amazon", other: "c-white", brand: 48
+
+    },
+    {
+      title: "Titan",
+      description: "Smart Pro Smartwatch with AMOLED",
+      description2: "titan Smart Pro Smartwatch with AMOLED",
+      imageUrl: "https://m.media-amazon.com/images/I/615kpN9ZbCL._AC_UL320_.jpg",
+      price: "₹11,995", strike: " ₹14,995 ", per: "(20%off)", other: "c-pink", pric: 11995, offer: 20,
+      details: "Get it by", date: " tomorrow, June 28 ", Delivery: "FREE Delivery by Amazon", deal: "Deal of the day",
+
+    },
+    {
+      title: "Titan",
+      description: "Light Leathers Analog Blue Dial Men's Watch-NM90102WL02 /",
+      description: " titan Light Leathers Analog Blue Dial Men's Watch-NM90102WL02 /",
+      imageUrl: "https://m.media-amazon.com/images/I/71ku2ZiZghS._AC_UL320_.jpg",
+      price: "₹10,295", strike: '', per: '', pric: 10295, deal: "Deal of the day",
+      details: "Get it by", date: " tomorrow, June 28 ", Delivery: "FREE Delivery by Amazon", other: "c-blue",
+
+    },
+    {
+      title: "Police",
+      description: "Collin Analogue Black Dial Black Stainless Steel Watch For Men -",
+      description2: " police Collin Analogue Black Dial Black Stainless Steel Watch For Men -",
+      imageUrl: "https://m.media-amazon.com/images/I/81aVOTttUDL._AC_UL320_.jpg",
+      price: "₹1,795", strike: " ₹2,995 ", per: " 10% ", pric: 1795, offer: 10,
+      details: "Get it by ", date: "Tuesday, July 5 ", Delivery: "FREE Delivery by Amazon", deal: "Limitted time Deal",
+    },
+    {
+
+      title: "Sonata",
+      description: "Analog Gold Dial Men's Watch-NN7007YM05/NP7007YM05",
+      description2: " Sonata Analog Gold Dial Men's Watch-NN7007YM05/NP7007YM05",
+      imageUrl: "https://m.media-amazon.com/images/I/71KiGWVK+nL._AC_UL320_.jpg",
+      price: "₹1,499", strike: " ₹1,699 ", per: " (12% off) ", pric: 1499, offer: 12,
+      details: "Get it by ", date: "Tuesday, July 5 ", Delivery: "FREE Delivery by Amazon", deal: "Limitted time Deal",
+      other: "yellow",
+    }]
+
+    var searchText = '';
+    function showResult() {
+      searchText = document.getElementById("inputType").value;
+
+      console.log("searchText", searchText);
+      var filteredProducts = products.filter(filterByDesText);
+
+      console.log("filteredProducts", filteredProducts);
+      prodCardDivs = '';
+      filteredProducts.map(process);
+      document.getElementById("productContainer").innerHTML = prodCardDivs;
+
+    }
+
+    showResult();
+    console.log("searchText", searchText);
+    //var searchText=document.getElementById("searchText").value;
+    function filterBySearchText(prod) {
+
+      if (prod.title != undefined) {
+        if (prod.title.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
+          return true;
+        }
+      }
+      return false;
+    }
+    function filterByDesText(prod) {
+
+      if (prod.description2 != undefined) {
+        if (prod.description2.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
+          return true;
+        }
+      }
+      return false;
+    }
+    var priceFrom = 0;
+    var priceTo = 0;
+
+    function showProductPrice() {
+      priceFrom = document.getElementById("priceFrom").value;
+      priceTo = document.getElementById("priceTo").value;
+      priceFrom = Number(priceFrom);
+      priceTo = Number(priceTo);
+      filteredProducts = products.filter(productPricefilter);
+      prodCardDivs = '';
+      filteredProducts.map(process);
+      document.getElementById("productContainer").innerHTML = prodCardDivs;
+    }
+    function productPricefilter(p) {
+
+      if ((p.pric >= priceFrom) && (p.pric <= priceTo)) {
+        return true;
+
+      }
+      return false;
+    }
+    function process(prod) {
+      var prodCardDiv = createProductCard(prod);
+      prodCardDivs = prodCardDivs + prodCardDiv;
+    }
+
+    function deal() {
+
+      filteredProducts = products.filter(todaysdeal);
+      prodCardDivs = '';
+      filteredProducts.map(process);
+      document.getElementById("productContainer").innerHTML = prodCardDivs;
+    }
+    function todaysdeal(prod) {
+      var n = "deal of the day";
+      if (prod.deal != undefined) {
+        if (prod.deal.toLowerCase().indexOf(n.toLowerCase()) > -1) {
+          return true;
+        }
+      }
+      return false;
+
+    }
+    function outOfStock(prod) {
+      var n = "out of stock";
+      if (prod.stock != undefined) {
+        if (prod.stock.toLowerCase().indexOf(n.toLowerCase()) > -1) {
+          return true;
+        }
+      }
+      return false;
+    }
+    function productofferfilter(p) {
+      if (p.offer >= n) {
+        return true;
+
+      }
+      return false;
+    }
+    function twothousand(f, s) {
+      priceFrom = f;
+      priceTo = s;
+      filteredProducts = products.filter(productPricefilter);
+      prodCardDivs = '';
+      filteredProducts.map(process);
+      document.getElementById("productContainer").innerHTML = prodCardDivs;
+    }
+    var n = 0;
+    function offerperc(a) {
+      n = Number(a);
+      console.log("n", n);
+      filteredProducts = products.filter(productofferfilter);
+      console.log("n", n);
+      console.log("filteredProducts", filteredProducts);
+
+      prodCardDivs = '';
+      filteredProducts.map(process);
+      document.getElementById("productContainer").innerHTML = prodCardDivs;
+    }
+    function brand(p) {
+      searchText = p;
+      var filteredProducts = products.filter(filterBySearchText);
+      prodCardDivs = '';
+      filteredProducts.map(process);
+      document.getElementById("productContainer").innerHTML = prodCardDivs;
+    }
+    function display(dis) {
+      searchText = dis;
+      var filteredProducts = products.filter(filterByDesText);
+      prodCardDivs = '';
+      filteredProducts.map(process);
+      document.getElementById("productContainer").innerHTML = prodCardDivs;
+    }
+
+    function diameter(f, s) {
+      priceFrom = f;
+      priceTo = s;
+      filteredProducts = products.filter(filterByDiameter);
+      console.log("diameter", filteredProducts);
+      prodCardDivs = '';
+      filteredProducts.map(process);
+      document.getElementById("productContainer").innerHTML = prodCardDivs;
+    }
+    function filterByDiameter(p) {
+
+      if ((p.brand >= priceFrom) && (p.brand <= priceTo)) {
+        return true;
+
+      }
+      return false;
+    }
+    function color(dis) {
+      searchText = dis;
+      var filteredProducts = products.filter(filterByotherText);
+      prodCardDivs = '';
+      filteredProducts.map(process);
+      document.getElementById("productContainer").innerHTML = prodCardDivs;
+    }
+    function filterByotherText(prod) {
+
+      if (prod.other != undefined) {
+        if (prod.other.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
+          return true;
+        }
+      }
+      return false;
+    }
+  </script>
+</body>
+
+</html>
